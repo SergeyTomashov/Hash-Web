@@ -10,3 +10,7 @@ class generate_hash:
     def sha1_hash(text):
         text1 = str.encode(text, encoding='utf-8')
         return hashlib.sha1(text1).hexdigest()
+    
+    def sha224_hash(text):
+        text1 = str.encode(text, encoding='utf-8')
+        return hashlib.sha224(text1).hexdigest()
