@@ -14,3 +14,17 @@ class generate_hash:
     def sha224_hash(text):
         text1 = str.encode(text, encoding='utf-8')
         return hashlib.sha224(text1).hexdigest()
+
+    def sha256_hash(text):
+        text1 = str.encode(text, encoding='utf-8')
+        return hashlib.sha256(text1).hexdigest()
+
+
+    def sha384_hash(text):
+        text1 = str.encode(text, encoding='utf-8')
+        return hashlib.sha384(text1).hexdigest()
+
+
+    def sha512_hash(text):
+        text1 = str.encode(text, encoding='utf-8')
+        return hashlib.sha512(text1).hexdigest()
