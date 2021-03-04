@@ -32,6 +32,10 @@ def API(message):
     elif message.text == 'Получить API_TOKEN':
         TOKEN1 = db.get_api_token(message.chat.id)
         bot.send_message(message.chat.id, f'Ваш API_TOKEN: {TOKEN1}', reply_markup=config.markup_st)
+    elif message.text == 'Документация к API':
+        f = open('TRUE_API.pdf', 'rb')
+        bot.send_message(message.chat.id, 'Документация к API')
+        bot.send_document(message.chat.id, f, reply_markup=config.markup_st)
     elif message.text == 'В начало':
         bot.send_message(message.chat.id, 'Вы вернулись в начало!', reply_markup=config.markup)
 bot.polling()
