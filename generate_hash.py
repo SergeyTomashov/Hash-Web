@@ -6,3 +6,7 @@ class generate_hash:
     def md5_hash(text):
         text1 = str.encode(text, encoding='utf-8')
         return hashlib.md5(text1).hexdigest()
+
+    def sha1_hash(text):
+        text1 = str.encode(text, encoding='utf-8')
+        return hashlib.sha1(text1).hexdigest()
